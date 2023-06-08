@@ -23,20 +23,28 @@ cursor.execute("""
     )
 """)
 cursor.execute("""
+    CREATE TABLE IF NOT EXISTS years (
+        id INTEGER PRIMARY KEY,
+        year INTEGER
+    )
+""")
+cursor.execute("""
     CREATE TABLE IF NOT EXISTS sales (
         id INTEGER PRIMARY KEY,
         country_id INTEGER,
         product_id INTEGER,
-        year INTEGER,
+        year_id INTEGER,
         sale INTEGER,
         FOREIGN KEY (country_id) REFERENCES countries (id),
-        FOREIGN KEY (product_id) REFERENCES products (id)
+        FOREIGN KEY (product_id) REFERENCES products (id),
+        FOREIGN KEY (year_id) REFERENCES years (id)
     )
 """)
 
 # Populate tables
 countries = {}
 products = {}
+years = {}
 
 for item in data:
     country_name = item["country"]
@@ -60,9 +68,17 @@ for item in data:
     else:
         product_id = products[product_name]
 
+    # Add year to the years table if it doesn't exist
+    if year not in years:
+        year_id = len(years) + 1
+        years[year] = year_id
+        cursor.execute("INSERT INTO years (id, year) VALUES (?, ?)", (year_id, year))
+    else:
+        year_id = years[year]
+
     # Add sale data to the sales table
-    cursor.execute("INSERT INTO sales (country_id, product_id, year, sale) VALUES (?, ?, ?, ?)",
-                   (country_id, product_id, year, sale_value))
+    cursor.execute("INSERT INTO sales (country_id, product_id, year_id, sale) VALUES (?, ?, ?, ?)",
+                   (country_id, product_id, year_id, sale_value))
 
 conn.commit()
 conn.close()
