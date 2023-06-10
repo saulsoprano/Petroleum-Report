@@ -1,0 +1,109 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:report:Exception on /total-sales [GET]
+Traceback (most recent call last):
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\report.py", line 282, in get_total_sales
+    results = query_executor.execute_total_sales_query()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: QueryExecutor.execute_total_sales_query() missing 1 required positional argument: 'cursor'
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2023 12:53:39] "[35m[1mGET /total-sales HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2023 12:53:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:report:Exception on /total-sales [GET]
+Traceback (most recent call last):
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\report.py", line 282, in get_total_sales
+    results = query_executor.execute_total_sales_query()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: QueryExecutor.execute_total_sales_query() missing 1 required positional argument: 'cursor'
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2023 12:54:39] "[35m[1mGET /total-sales HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2023 13:00:29] "[33mGET /totalsales HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2023 13:00:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:report:Exception on /total-sales [GET]
+Traceback (most recent call last):
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\report.py", line 282, in get_total_sales
+    results = query_executor.execute_total_sales_query()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: QueryExecutor.execute_total_sales_query() missing 1 required positional argument: 'cursor'
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2023 13:01:02] "[35m[1mGET /total-sales HTTP/1.1[0m" 500 -
+ERROR:report:Exception on /total-sales [GET]
+Traceback (most recent call last):
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\report.py", line 282, in get_total_sales
+    results = query_executor.execute_total_sales_query()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: QueryExecutor.execute_total_sales_query() missing 1 required positional argument: 'cursor'
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2023 13:01:06] "[35m[1mGET /total-sales HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2023 13:01:12] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:report:Exception on /total-sales [GET]
+Traceback (most recent call last):
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\myenv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\97798\PycharmProjects\petroleum_report\report.py", line 282, in get_total_sales
+    results = query_executor.execute_total_sales_query()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: QueryExecutor.execute_total_sales_query() missing 1 required positional argument: 'cursor'
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2023 13:01:39] "[35m[1mGET /total-sales HTTP/1.1[0m" 500 -
+ERROR:root:Error importing data: Database error
