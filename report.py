@@ -17,7 +17,7 @@ class DataImporter:
             # Fetching data from the API endpoint
             response = requests.get(self.api_url)
             # Raising an exception for unsuccessful HTTP response
-            response.raise_for_status()  
+            response.raise_for_status()
             data = response.json()
 
             # Storing the data into a SQLite database
@@ -194,13 +194,13 @@ class QueryExecutor:
 
             # Printing the top countries with the highest total sales
             print("Top 3 countries with the highest total sales:")
-            print("Country".ljust(max_country_length), "Total Sale".ljust(max_total_sale_length))
+            print("Country".ljust(max_country_length), "Total Sale".rjust(max_total_sale_length))
             # Adding extra padding
-            print("-" * (max_country_length + max_total_sale_length + 5))  
+            print("-" * (max_country_length + max_total_sale_length + 5))
 
             for country in top_countries:
                 country_name = country[0].ljust(max_country_length)
-                total_sale = str(country[1]).ljust(max_total_sale_length)
+                total_sale = str(country[1]).rjust(max_total_sale_length)
                 print(f"{country_name}   {total_sale}")
 
             print()
@@ -223,8 +223,9 @@ class QueryExecutor:
 
             # Printing the top countries with the lowest total sales
             print("Top 3 countries with the lowest total sales:")
-            print("Country".ljust(max_country_length), "Total Sale".ljust(max_total_sale_length))
-            print("-" * (max_country_length + max_total_sale_length + 5))  # Add extra padding
+            print("Country".ljust(max_country_length), "Total Sale".rjust(max_total_sale_length))
+            # Adding extra padding
+            print("-" * (max_country_length + max_total_sale_length + 5))
 
             for country in bottom_countries:
                 country_name = country[0].ljust(max_country_length)
@@ -237,8 +238,8 @@ class QueryExecutor:
         try:
             # Executing the query to get the average sale of each petroleum product for 4-year intervals
             cursor.execute("""
-                SELECT products.product, 
-                    CASE 
+                SELECT products.product,
+                    CASE
                         WHEN years.year <= 2010 THEN '2007-2010'
                         ELSE '2011-2014'
                     END AS year_interval,
@@ -278,7 +279,6 @@ if __name__ == "__main__":
         "data/petroleum.db"
     )
     data_importer.import_data()
-     
     # Checking if a query argument is provided
     if len(sys.argv) < 2:
         print("Please provide a query name as a command-line argument.")
